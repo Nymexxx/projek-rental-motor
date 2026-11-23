@@ -1,0 +1,150 @@
+import vario150Image from "../assets/images/vario150.jpeg";
+import Nmax155Image from "../assets/images/Nmax155.jpeg";
+import Aerox155Image from "../assets/images/Aerox155.jpeg";
+import zx25rImage from "../assets/images/zx25r.jpeg";
+
+export const MOTORCYCLES = [
+  {
+    id: "honda-vario-150",
+    name: "Honda Vario 150",
+    brand: "Honda",
+    model: "Vario 150",
+    year: 2015,
+    price: 85000,
+    rating: 4.8,
+    reviewCount: 312,
+    image: vario150Image,
+    category: "Scooter",
+    engineCC: 149.3,
+    engineType: "4-Stroke, OHC",
+    fuelType: "Petrol",
+    transmission: "Automatic",
+    maxSpeed: 115,
+    weight: 109,
+    color: "Sporty White",
+    available: true,
+    description:
+      "The Honda Vario 150 is Honda's most iconic automatic scooter in Southeast Asia. Equipped with eSP engine technology for superior fuel efficiency, a smart key system, and CBS braking for safety. Ideal for daily city commuting.",
+    features: ["eSP Engine", "Smart Key System", "LED Headlight", "CBS Brakes", "USB Charger"],
+    accentColor: "#E8192C",
+    stock: 4,
+  },
+  {
+    id: "yamaha-nmax-155",
+    name: "Yamaha NMAX 155",
+    brand: "Yamaha",
+    model: "NMAX 155",
+    year: 2024,
+    price: 120000,
+    rating: 4.9,
+    reviewCount: 487,
+    image: Nmax155Image,
+    imagePosition: "center 60%",
+    category: "Maxi Scooter",
+    engineCC: 155.1,
+    engineType: "4-Stroke, SOHC, VVA",
+    fuelType: "Petrol",
+    transmission: "Automatic",
+    maxSpeed: 125,
+    weight: 127,
+    color: "Midnight Cyan",
+    available: true,
+    description:
+      "The Yamaha NMAX 155 is the premium maxi-scooter that dominates the streets. Featuring Variable Valve Actuation, ABS braking, traction control, and a full digital instrument cluster. Perfect blend of performance and style.",
+    features: ["VVA Technology", "ABS Dual Channel", "Traction Control", "Full Digital LCD", "Smart Key"],
+    accentColor: "#003087",
+    stock: 2,
+  },
+  {
+    id: "honda-pcx-160",
+    name: "Honda PCX 160",
+    brand: "Honda",
+    model: "PCX 160",
+    year: 2023,
+    price: 110000,
+    rating: 4.7,
+    reviewCount: 256,
+    image:
+      "https://images.unsplash.com/photo-1628798211398-29d5c9773fbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxIb25kYSUyMFBDWCUyMDE2MCUyMHByZW1pdW0lMjBzY29vdGVyfGVufDF8fHx8MTc3Nzg5OTk0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    category: "Scooter",
+    engineCC: 156.9,
+    engineType: "4-Stroke, eSP+",
+    fuelType: "Petrol",
+    transmission: "Automatic",
+    maxSpeed: 120,
+    weight: 132,
+    color: "Matte Deep Blue",
+    available: true,
+    description:
+      "The Honda PCX 160 is the ultimate premium scooter with eSP+ engine technology. With a large under-seat storage of 30L, Honda Selectable Torque Control, and a sleek body design, it's built for comfort and efficiency.",
+    features: ["eSP+ Engine", "HSTC System", "30L Storage", "Smart Key", "Keyless Entry"],
+    accentColor: "#0369A1",
+    stock: 3,
+  },
+  {
+    id: "kawasaki-zx25r",
+    name: "Kawasaki zx25r",
+    brand: "Kawasaki",
+    model: "zx25r",
+    year: 2022,
+    price: 180000,
+    rating: 4.6,
+    reviewCount: 143,
+    image: zx25rImage,
+    category: "Sport",
+    engineCC: 249.8,
+    engineType: "4-Stroke, Parallel Twin",
+    fuelType: "Petrol",
+    transmission: "Manual",
+    maxSpeed: 204,
+    weight: 184,
+    color: "Full Carbon Livery",
+    available: true,
+    description:
+      "The Kawasaki zx25r is a powerful sport bike with a parallel-twin engine delivering thrilling performance. Lightweight trellis frame, Dunlop sport tires, and aggressive Z-DNA styling make it the street fighter of choice.",
+    features: ["Parallel Twin Engine", "Assist & Slipper Clutch", "LED Lighting", "Digital Speedometer", "Dunlop Tires"],
+    accentColor: "#16A34A",
+    stock: 1,
+  },
+  {
+    id: "yamaha-aerox-155",
+    name: "Yamaha Aerox 155",
+    brand: "Yamaha",
+    model: "Aerox 155",
+    year: 2024,
+    price: 130000,
+    rating: 4.8,
+    reviewCount: 198,
+    image: Aerox155Image,
+    imagePosition: "center 80%",
+    category: "Sport Scooter",
+    engineCC: 155.1,
+    engineType: "4-Stroke, SOHC, VVA",
+    fuelType: "Petrol",
+    transmission: "Automatic",
+    maxSpeed: 130,
+    weight: 125,
+    color: "Racing Blue",
+    available: true,
+    description:
+      "The Yamaha Aerox 155 is the sporty connected scooter designed for the bold urban rider. Bluetooth Y-Connect app, full-LED lighting, and VVA engine technology make it the most tech-forward scooter on the market.",
+    features: ["Y-Connect Bluetooth", "VVA Engine", "Full LED System", "Dual ABS", "Sporty Design"],
+    accentColor: "#7C3AED",
+    stock: 2,
+  },
+];
+
+export function getMotorcycleById(id) {
+  return MOTORCYCLES.find((m) => m.id === id);
+}
+
+export function formatPrice(price) {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(price);
+}
+
+export const CATEGORIES = ["All", "Scooter", "Maxi Scooter", "Sport Scooter", "Sport"];
